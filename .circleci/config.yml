@@ -1,0 +1,11 @@
+version: 2.1
+
+orbs:
+  maven: circleci/maven@0.0.12
+
+workflows:
+  maven_test:
+    jobs:
+mvn compile com.softwaresecured.reshift:maven-plugin:LATEST:analyse \
+    com.softwaresecured.reshift:maven-plugin:LATEST:upload \
+    -Dreshift.token=oRSYnfywNX4FotuFQWfHq7ua1f/2AUPyd0bZmjaW8/g=
